@@ -8,7 +8,7 @@ import { CDelimiters, CColumnsHeaders } from '../../render/row.columns.api';
 import { isDLTSource } from '../../render/row.columns';
 
 @Component({
-    selector: Toolkit.EViewsTypes.sidebarVertical,
+    selector: 'lib-sidebar-ver',
     templateUrl: './template.html',
     styleUrls: ['./styles.less']
 })

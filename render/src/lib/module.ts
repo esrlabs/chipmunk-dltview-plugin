@@ -4,6 +4,8 @@ import * as Toolkit from 'chipmunk.client.toolkit';
 
 import { CommonModule } from '@angular/common';
 
+export { SidebarVerticalComponent };
+
 @NgModule({
     entryComponents: [ SidebarVerticalComponent ],
     declarations: [ SidebarVerticalComponent ],
