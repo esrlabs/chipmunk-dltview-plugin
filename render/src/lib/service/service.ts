@@ -3,6 +3,8 @@ import * as Toolkit from 'chipmunk.client.toolkit';
 import { isDLTSource } from '../render/row.columns';
 import { Observable, Subject } from 'rxjs';
 
+export const CPluginID = 'chipmunk-dltview-plugin';
+
 export class Service extends Toolkit.APluginService {
 
     private api: Toolkit.IAPI | undefined;
@@ -41,7 +43,7 @@ export class Service extends Toolkit.APluginService {
         if (!isDLTSource(event.source.name)) {
             return;
         }
-        this.api.openSidebarApp('dlt-render', true);
+        this.api.openSidebarApp(CPluginID, true);
     }
 
     private _onSessionChange(guid: string) {

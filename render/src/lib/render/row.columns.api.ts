@@ -19,6 +19,20 @@ export const CColumnsHeaders = [
     'PAYLOAD',
 ];
 
+export const CAliases = {
+    'Datetime': 'DateTime',
+    'ECUID': 'ECU',
+    'VERS': 'Dlt Protocol Version (VERS)',
+    'SID': 'Session ID (SEID)',
+    'MCNT': 'Message counter (MCNT)',
+    'TMS': 'Timestamp (TMSP)',
+    'EID': 'ECU',
+    'APID': 'Application ID (APID)',
+    'CTID': 'Context ID (CTID)',
+    'MSTP': 'Message Type (MSTP)',
+    'PAYLOAD': 'Payload'
+};
+
 export class DLTRowColumnsAPI extends Toolkit.ATypedRowRenderAPIColumns {
 
     constructor() {

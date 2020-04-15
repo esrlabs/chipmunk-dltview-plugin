@@ -4,7 +4,7 @@
 import { Component, OnDestroy, ChangeDetectorRef, AfterViewInit, Input, AfterContentInit } from '@angular/core';
 import * as Toolkit from 'chipmunk.client.toolkit';
 import { SafeHtml, DomSanitizer } from '@angular/platform-browser';
-import { CDelimiters, CColumnsHeaders } from '../../render/row.columns.api';
+import { CDelimiters, CColumnsHeaders, CAliases } from '../../render/row.columns.api';
 import { isDLTSource } from '../../render/row.columns';
 
 @Component({
@@ -62,10 +62,12 @@ export class SidebarVerticalComponent implements AfterViewInit, OnDestroy, After
             return this._forceUpdate();
         }
         this._ng_columns = columns.map((value: string, index: number) => {
-            return { name: CColumnsHeaders[index], html: this._sanitizer.bypassSecurityTrustHtml(value) };
+            return { name: CAliases[CColumnsHeaders[index]], html: this._sanitizer.bypassSecurityTrustHtml(value) };
         });
         const payload: string = columns[columns.length - 1];
-        this._ng_arguments = payload.split(CDelimiters.arguments);
+        this._ng_arguments = payload.split(CDelimiters.arguments).filter((arg: string) => {
+            return arg.trim() !== '';
+        });
         return this._forceUpdate();
     }
 

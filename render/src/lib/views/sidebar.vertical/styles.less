@@ -32,33 +32,39 @@
             list-style: none;
             border-bottom: dashed thin @scheme-color-4;
             z-index: 1;
-            & p.field{
-                position: relative;
-                display: block;
-                white-space: normal;
-                font-family: 'console', monospace;
-                font-size: 10px;
-                padding: 4px 0 1px 0;
-                margin: 0;
-                line-height: 12px;
-                color: @scheme-color-3;
-                user-select: text!important;
-                pointer-events: all!important;
-            }
-            & p.content {
-                position: relative;
-                display: block;
-                white-space: normal;
-                font-family: 'console', monospace;
-                font-size: 13px;
-                font-variant-numeric: tabular-nums;
-                padding: 0;
-                margin: 0;
-                line-height: 16px;
-                user-select: text!important;
-                pointer-events: all!important;
-                color: @scheme-color-0;
-            }
+
         }
+    }
+    & p.field{
+        position: relative;
+        display: block;
+        white-space: normal;
+        font-family: 'console', monospace;
+        font-size: 10px;
+        padding: 4px 0 1px 0;
+        margin: 0;
+        line-height: 12px;
+        color: @scheme-color-3;
+        user-select: text!important;
+        pointer-events: all!important;
+    }
+    & p.content {
+        position: relative;
+        display: block;
+        white-space: normal;
+        font-family: 'console', monospace;
+        font-size: 13px;
+        font-variant-numeric: tabular-nums;
+        padding: 0;
+        margin: 0;
+        line-height: 16px;
+        user-select: text!important;
+        pointer-events: all!important;
+        color: @scheme-color-0;
+    }
+    & p.argument{
+        font-size: 11px;
+        margin-left: 8px;
+        color: @scheme-color-1;
     }
 }
