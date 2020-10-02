@@ -43,8 +43,8 @@ export class DLTRowColumnsAPI extends Toolkit.ATypedRowRenderAPIColumns {
         return CColumnsHeaders;
     }
 
-    public getColumns(str: string): string[] {
-        return str.split('\u0004');
+    public getDelimiter(): string {
+        return '\u0004';
     }
 
     public getDefaultWidths(): Array<{ width: number, min: number }> {
