@@ -50,7 +50,7 @@ export class SidebarVerticalComponent implements AfterViewInit, OnDestroy, After
     }
 
     private _onRowSelected(event: Toolkit.IOnRowSelectedEvent) {
-        if (!isDLTSource(event.source.name)) {
+        if (!isDLTSource(event.source.name, event.source.meta)) {
             this._ng_columns = [];
             this._ng_arguments = [];
             return this._forceUpdate();
